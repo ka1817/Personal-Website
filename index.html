@@ -62,7 +62,7 @@
             },
             float: {
               '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-10px)' }
+              '50%': { transform: 'translateY(-8px)' }
             },
             glow: {
               '0%': { boxShadow: '0 0 15px rgba(6, 182, 212, 0.3)' },
@@ -83,7 +83,7 @@
   <!-- Interactive Particle Background Canvas -->
   <canvas id="particle-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
   
-  <!-- Glowing Gradient Orbs in Background -->
+  <!-- Glowing Ambient Gradient Orbs in Background -->
   <div class="fixed inset-0 pointer-events-none overflow-hidden z-0 opacity-40">
     <div class="absolute -top-40 -left-40 w-96 h-96 bg-cyan-600/30 rounded-full filter blur-3xl animate-blob"></div>
     <div class="absolute top-1/3 -right-40 w-96 h-96 bg-purple-600/30 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
@@ -187,7 +187,7 @@
   <!-- Main Content Wrapper -->
   <main class="relative z-10">
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (REDESIGNED: PROFESSIONAL & HIGH-IMPACT) -->
     <section id="hero" class="min-h-screen pt-32 pb-20 flex items-center justify-center relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -199,12 +199,12 @@
             <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono tracking-wide">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
               <span class="w-2 h-2 rounded-full bg-emerald-400 -ml-4"></span>
-              <span>Open to AI / ML & Data Science Roles</span>
+              <span>Available for AI / ML & Data Science Roles</span>
             </div>
 
             <!-- Main Heading -->
             <div class="space-y-2">
-              <p class="text-sm sm:text-base font-mono text-slate-400 uppercase tracking-widest">Hello World, I'm</p>
+              <p class="text-sm sm:text-base font-mono text-slate-400 uppercase tracking-widest">AI Engineer & Data Scientist</p>
               <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1]">
                 Katta Sai <br class="hidden sm:inline" />
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-purple-500">
@@ -222,26 +222,26 @@
 
             <!-- Bio Description -->
             <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Specialized in building high-accuracy <span class="text-white font-medium">Agentic RAG systems</span>, production-grade <span class="text-white font-medium">MLOps pipelines</span>, and containerized AI microservices. Passionate about transforming raw data and modern LLMs into dependable, ultra-fast intelligent applications.
+              Architecting high-accuracy <span class="text-white font-medium">Agentic RAG systems</span>, production <span class="text-white font-medium">MLOps pipelines</span>, and containerized microservices. Bridging the gap between cutting-edge LLMs and robust, low-latency enterprise applications.
             </p>
 
             <!-- Key Quick Badges -->
             <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
-              <span class="px-3 py-1 rounded-lg bg-slate-800/80 border border-white/10 text-xs font-mono text-slate-300 flex items-center gap-1.5">
+              <span class="px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-white/10 text-xs font-mono text-slate-300 flex items-center gap-2">
                 <i class="fa-solid fa-award text-yellow-400"></i> GATE 2026 DA (AIR 5262)
               </span>
-              <span class="px-3 py-1 rounded-lg bg-slate-800/80 border border-white/10 text-xs font-mono text-slate-300 flex items-center gap-1.5">
+              <span class="px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-white/10 text-xs font-mono text-slate-300 flex items-center gap-2">
                 <i class="fa-brands fa-github text-cyan-400"></i> 93+ Repositories
               </span>
-              <span class="px-3 py-1 rounded-lg bg-slate-800/80 border border-white/10 text-xs font-mono text-slate-300 flex items-center gap-1.5">
-                <i class="fa-solid fa-cube text-purple-400"></i> MLOps & Dockerized CI/CD
+              <span class="px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-white/10 text-xs font-mono text-slate-300 flex items-center gap-2">
+                <i class="fa-solid fa-bolt text-purple-400"></i> Groq LLM Powered
               </span>
             </div>
 
             <!-- Action Buttons -->
             <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
               <a href="#projects" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold text-sm shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105 transition-all flex items-center gap-2">
-                <span>Explore Featured Work</span>
+                <span>Explore Featured Systems</span>
                 <i class="fa-solid fa-arrow-right text-xs"></i>
               </a>
 
@@ -262,53 +262,75 @@
             </div>
           </div>
 
-          <!-- Hero Right Column: Interactive 3D/AI Code Card -->
+          <!-- Hero Right Column: Executive Specialization & Architecture Card -->
           <div class="lg:col-span-5 flex justify-center">
             <div class="relative w-full max-w-md">
               
-              <!-- Ambient Glow behind card -->
-              <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-600 to-emerald-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition duration-1000 animate-pulse-slow"></div>
+              <!-- Ambient Glow -->
+              <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-600 to-emerald-500 rounded-2xl blur-xl opacity-50 transition duration-1000 animate-pulse-slow"></div>
               
-              <!-- Glass Card -->
-              <div class="relative bg-slate-950/90 border border-white/15 rounded-2xl p-6 shadow-2xl backdrop-blur-xl space-y-4">
+              <!-- Professional Executive Profile Card -->
+              <div class="relative bg-slate-950/90 border border-white/15 rounded-2xl p-6 sm:p-7 shadow-2xl backdrop-blur-xl space-y-5">
                 
                 <!-- Card Header -->
                 <div class="flex items-center justify-between border-b border-white/10 pb-4">
-                  <div class="flex items-center gap-2">
-                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                    <span class="ml-2 text-xs font-mono text-slate-400">engineer_profile.py</span>
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center font-bold text-slate-950 text-sm">
+                      PR
+                    </div>
+                    <div>
+                      <h3 class="text-sm font-bold text-white leading-tight">Executive Profile</h3>
+                      <span class="text-xs font-mono text-cyan-400">AI / ML Specialist</span>
+                    </div>
                   </div>
-                  <div class="flex items-center gap-1.5 text-xs font-mono text-cyan-400 bg-cyan-950/50 px-2 py-0.5 rounded border border-cyan-800/50">
-                    <i class="fa-solid fa-microchip text-[10px]"></i> Active
-                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-mono text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-800/50">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Verified
+                  </span>
                 </div>
 
-                <!-- Code block representation -->
-                <div class="font-mono text-xs text-slate-300 leading-relaxed space-y-1.5 overflow-x-auto py-2">
-                  <p><span class="text-purple-400">class</span> <span class="text-yellow-300">AIEngineer</span>:</p>
-                  <p class="pl-4"><span class="text-cyan-400">def</span> <span class="text-blue-400">__init__</span>(self):</p>
-                  <p class="pl-8 text-slate-400">self.name = <span class="text-emerald-300">"Katta Sai Pranav Reddy"</span></p>
-                  <p class="pl-8 text-slate-400">self.degree = <span class="text-emerald-300">"B.Tech AI & ML"</span></p>
-                  <p class="pl-8 text-slate-400">self.gate_air = <span class="text-purple-300">5262</span>  <span class="text-slate-500"># GATE 2026 DA</span></p>
-                  <p class="pl-8 text-slate-400">self.core_focus = [</p>
-                  <p class="pl-12 text-teal-300">"Agentic RAG Systems",</p>
-                  <p class="pl-12 text-teal-300">"MLOps (MLflow, DVC, Docker)",</p>
-                  <p class="pl-12 text-teal-300">"FastAPI Microservices & AWS"</p>
-                  <p class="pl-8 text-slate-400">]</p>
-                  <p class="pl-4"><span class="text-cyan-400">def</span> <span class="text-blue-400">build_impactful_ai</span>(self):</p>
-                  <p class="pl-8 text-slate-400"><span class="text-purple-400">return</span> <span class="text-emerald-300">"High-accuracy, low-latency intelligence"</span></p>
+                <!-- Engineering Focus Pillars -->
+                <div class="space-y-3">
+                  
+                  <div class="p-3 rounded-xl bg-slate-900/80 border border-white/5 flex items-center gap-3.5 hover:border-cyan-500/30 transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-sm flex-shrink-0">
+                      <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-bold text-white">Agentic RAG & LLMs</h4>
+                      <p class="text-[11px] text-slate-400">FAISS, Pinecone, LangChain, Groq Llama-3.3-70B</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-slate-900/80 border border-white/5 flex items-center gap-3.5 hover:border-purple-500/30 transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-sm flex-shrink-0">
+                      <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-bold text-white">Production MLOps</h4>
+                      <p class="text-[11px] text-slate-400">MLflow, DVC, Docker, AWS EC2/S3, GitHub Actions</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-slate-900/80 border border-white/5 flex items-center gap-3.5 hover:border-emerald-500/30 transition-all">
+                    <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-sm flex-shrink-0">
+                      <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-bold text-white">Predictive Modeling & Data</h4>
+                      <p class="text-[11px] text-slate-400">99% Churn Recall, 93% Alzheimer's Recall, PostgreSQL</p>
+                    </div>
+                  </div>
+
                 </div>
 
-                <!-- Live Metrics Tickers -->
-                <div class="grid grid-cols-2 gap-3 pt-2 border-t border-white/10">
+                <!-- Live Metrics Grid -->
+                <div class="grid grid-cols-2 gap-3 pt-3 border-t border-white/10">
                   <div class="bg-slate-900/80 p-3 rounded-xl border border-white/5 text-center">
-                    <div class="text-xl font-bold text-cyan-400 font-mono" id="hero-stat-accuracy">95%</div>
+                    <div class="text-xl font-bold text-cyan-400 font-mono">95%</div>
                     <div class="text-[11px] text-slate-400">RAG Search Accuracy</div>
                   </div>
                   <div class="bg-slate-900/80 p-3 rounded-xl border border-white/5 text-center">
-                    <div class="text-xl font-bold text-purple-400 font-mono" id="hero-stat-recall">99%</div>
+                    <div class="text-xl font-bold text-purple-400 font-mono">99%</div>
                     <div class="text-[11px] text-slate-400">ML Model Recall</div>
                   </div>
                 </div>
@@ -408,7 +430,7 @@
               <strong class="text-white">MLOps pipelines</strong> for Customer Churn with MLflow, DVC, AWS S3, and GitHub Actions CI/CD to EC2.
             </p>
             <p>
-              Through internships at <span class="text-cyan-400 font-medium">AI Varient</span> and <span class="text-purple-400 font-medium">Unified Mentor Pvt. Ltd.</span>, I’ve delivered diagnostic ML pipelines achieving 93% recall on Alzheimer’s detection and predictive workforce retention models.
+              Through internships at <span class="text-cyan-400 font-medium">AI Varient</span>, <span class="text-purple-400 font-medium">Unified Mentor Pvt. Ltd.</span>, and <span class="text-emerald-400 font-medium">iNeuron Intelligence</span>, I’ve delivered diagnostic ML pipelines achieving 93% recall on Alzheimer’s detection, employee retention models, and high-performance customer segmentation.
             </p>
 
             <!-- Key attributes cards -->
@@ -439,16 +461,16 @@
       </div>
     </section>
 
-    <!-- INTERACTIVE AI CONSOLE / TERMINAL -->
+    <!-- INTERACTIVE AI CONSOLE / TERMINAL (GROQ POWERED) -->
     <section id="terminal" class="py-20 relative bg-slate-950/80 border-y border-white/5">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-xs">
-            <i class="fa-solid fa-terminal"></i> Interactive Shell v2.4
+            <i class="fa-solid fa-bolt text-yellow-400"></i> Groq Llama-3.3-70B Powered AI Console
           </div>
-          <h2 class="text-3xl font-bold text-white">Ask Pranav's AI Console</h2>
-          <p class="text-slate-400 text-sm">Type terminal commands or ask natural questions about Pranav's background, projects, skills, or resume.</p>
+          <h2 class="text-3xl font-bold text-white">Ask Pranav's AI Assistant</h2>
+          <p class="text-slate-400 text-sm">Ask any question about Pranav's projects, experience, GATE rank, or MLOps architecture in natural language.</p>
         </div>
 
         <!-- Terminal Window Frame -->
@@ -466,8 +488,8 @@
               <button id="terminal-clear-btn" class="text-[11px] font-mono text-slate-400 hover:text-cyan-400 transition-colors">
                 <i class="fa-solid fa-eraser"></i> clear
               </button>
-              <span class="text-xs font-mono text-cyan-400 bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800">
-                AI Powered
+              <span class="text-xs font-mono text-cyan-400 bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800 flex items-center gap-1">
+                <i class="fa-solid fa-microchip text-[10px]"></i> Groq LLM
               </span>
             </div>
           </div>
@@ -475,28 +497,27 @@
           <!-- Terminal Output Area -->
           <div id="terminal-output" class="p-6 font-mono text-xs sm:text-sm space-y-4 max-h-[380px] overflow-y-auto scrollbar-thin text-slate-200">
             <div class="text-slate-400">
-              Welcome to <span class="text-cyan-400 font-bold">Pranav Reddy's Interactive Assistant</span>!
-              <br />Type a command or click a quick prompt below to explore. Type <span class="text-yellow-300">help</span> for all commands.
+              Welcome to <span class="text-cyan-400 font-bold">Sai Pranav Reddy's AI Console</span>!
+              <br />Ask any natural language question or try the preset commands below. Type <span class="text-yellow-300">help</span> for all options.
             </div>
           </div>
 
           <!-- Quick Command Chips -->
           <div class="px-6 py-2.5 bg-slate-900/50 border-t border-white/5 flex flex-wrap gap-2 items-center">
-            <span class="text-[11px] font-mono text-slate-400 mr-1">Quick Prompts:</span>
-            <button class="term-chip text-xs font-mono bg-slate-800 hover:bg-cyan-950 hover:text-cyan-300 hover:border-cyan-500/50 text-slate-300 px-2.5 py-1 rounded-md border border-white/10 transition-all" data-cmd="about">about</button>
-            <button class="term-chip text-xs font-mono bg-slate-800 hover:bg-cyan-950 hover:text-cyan-300 hover:border-cyan-500/50 text-slate-300 px-2.5 py-1 rounded-md border border-white/10 transition-all" data-cmd="projects">projects</button>
-            <button class="term-chip text-xs font-mono bg-slate-800 hover:bg-cyan-950 hover:text-cyan-300 hover:border-cyan-500/50 text-slate-300 px-2.5 py-1 rounded-md border border-white/10 transition-all" data-cmd="skills">skills</button>
-            <button class="term-chip text-xs font-mono bg-slate-800 hover:bg-cyan-950 hover:text-cyan-300 hover:border-cyan-500/50 text-slate-300 px-2.5 py-1 rounded-md border border-white/10 transition-all" data-cmd="gate">gate-rank</button>
-            <button class="term-chip text-xs font-mono bg-slate-800 hover:bg-cyan-950 hover:text-cyan-300 hover:border-cyan-500/50 text-slate-300 px-2.5 py-1 rounded-md border border-white/10 transition-all" data-cmd="contact">contact</button>
-            <button class="term-chip text-xs font-mono bg-slate-800 hover:bg-cyan-950 hover:text-cyan-300 hover:border-cyan-500/50 text-slate-300 px-2.5 py-1 rounded-md border border-white/10 transition-all" data-cmd="resume">resume</button>
+            <span class="text-[11px] font-mono text-slate-400 mr-1">Suggested Questions:</span>
+            <button class="term-chip text-xs font-mono bg-slate-800 hover:bg-cyan-950 hover:text-cyan-300 hover:border-cyan-500/50 text-slate-300 px-2.5 py-1 rounded-md border border-white/10 transition-all" data-cmd="Tell me about your BigBasket SmartCart project">BigBasket RAG</button>
+            <button class="term-chip text-xs font-mono bg-slate-800 hover:bg-cyan-950 hover:text-cyan-300 hover:border-cyan-500/50 text-slate-300 px-2.5 py-1 rounded-md border border-white/10 transition-all" data-cmd="What MLOps and cloud tools do you specialize in?">MLOps Stack</button>
+            <button class="term-chip text-xs font-mono bg-slate-800 hover:bg-cyan-950 hover:text-cyan-300 hover:border-cyan-500/50 text-slate-300 px-2.5 py-1 rounded-md border border-white/10 transition-all" data-cmd="What is your GATE 2026 rank and score?">GATE Rank</button>
+            <button class="term-chip text-xs font-mono bg-slate-800 hover:bg-cyan-950 hover:text-cyan-300 hover:border-cyan-500/50 text-slate-300 px-2.5 py-1 rounded-md border border-white/10 transition-all" data-cmd="Tell me about your internship experience">Internships</button>
+            <button class="term-chip text-xs font-mono bg-slate-800 hover:bg-cyan-950 hover:text-cyan-300 hover:border-cyan-500/50 text-slate-300 px-2.5 py-1 rounded-md border border-white/10 transition-all" data-cmd="How can I contact Pranav for opportunities?">Contact Info</button>
           </div>
 
           <!-- Terminal Input Row -->
           <form id="terminal-form" class="p-4 bg-slate-900/90 border-t border-white/10 flex items-center gap-3">
             <span class="font-mono text-cyan-400 font-bold">&gt;</span>
-            <input type="text" id="terminal-input" autocomplete="off" placeholder="Ask anything (e.g. 'Tell me about BigBasket SmartCart' or 'help')..." class="w-full bg-transparent border-none outline-none font-mono text-sm text-cyan-300 placeholder:text-slate-500" />
-            <button type="submit" class="px-4 py-2 rounded-lg bg-cyan-500/20 hover:bg-cyan-500 text-cyan-300 hover:text-black font-mono text-xs border border-cyan-500/40 transition-all">
-              Execute
+            <input type="text" id="terminal-input" autocomplete="off" placeholder="Ask anything (e.g. 'Tell me about BigBasket SmartCart' or 'What is your GATE rank?')..." class="w-full bg-transparent border-none outline-none font-mono text-sm text-cyan-300 placeholder:text-slate-500" />
+            <button type="submit" class="px-4 py-2 rounded-lg bg-cyan-500/20 hover:bg-cyan-500 text-cyan-300 hover:text-black font-mono text-xs border border-cyan-500/40 transition-all flex items-center gap-1.5">
+              <i class="fa-solid fa-paper-plane text-[10px]"></i> Ask
             </button>
           </form>
 
@@ -512,7 +533,7 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div class="space-y-3 max-w-2xl">
             <h2 class="text-xs font-mono uppercase tracking-widest text-cyan-400">Portfolio & Case Studies</h2>
-            <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Featured Engineering Projects</p>
+            <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Featured Engineering Systems</p>
             <p class="text-slate-400 text-sm">Explore interactive AI applications, RAG pipelines, MLOps architectures, and deep learning models.</p>
           </div>
 
@@ -1043,11 +1064,11 @@
 
               <div class="skill-item">
                 <div class="flex justify-between text-xs font-mono mb-1">
-                  <span class="text-slate-200">Hugging Face & Transformers</span>
-                  <span class="text-purple-400">90%</span>
+                  <span class="text-slate-200">Groq & Transformers</span>
+                  <span class="text-purple-400">92%</span>
                 </div>
                 <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
-                  <div class="bg-gradient-to-r from-purple-500 to-indigo-400 h-full rounded-full w-[90%]"></div>
+                  <div class="bg-gradient-to-r from-purple-500 to-indigo-400 h-full rounded-full w-[92%]"></div>
                 </div>
               </div>
 
@@ -1123,11 +1144,12 @@
         <!-- Tech Badges Cloud -->
         <div class="mt-12 p-6 rounded-2xl bg-slate-900/60 border border-white/5">
           <div class="text-center mb-6">
-            <h4 class="text-sm font-mono text-slate-300">Complete Tech Stack & Tools</h4>
+            <h4 class="text-sm font-mono text-slate-300">Complete Tech Stack & Ecosystem</h4>
           </div>
           <div class="flex flex-wrap justify-center gap-2.5 font-mono text-xs">
             <span class="tech-pill"><i class="fa-brands fa-python text-yellow-400 mr-1.5"></i>Python</span>
-            <span class="tech-pill"><i class="fa-solid fa-database text-cyan-400 mr-1.5"></i>SQL</span>
+            <span class="tech-pill"><i class="fa-solid fa-database text-cyan-400 mr-1.5"></i>PostgreSQL & SQL</span>
+            <span class="tech-pill"><i class="fa-solid fa-bolt text-amber-400 mr-1.5"></i>Groq LLM</span>
             <span class="tech-pill"><i class="fa-solid fa-bolt text-teal-400 mr-1.5"></i>FastAPI</span>
             <span class="tech-pill"><i class="fa-brands fa-docker text-blue-400 mr-1.5"></i>Docker</span>
             <span class="tech-pill"><i class="fa-brands fa-aws text-amber-400 mr-1.5"></i>AWS (EC2/S3/ECR)</span>
@@ -1135,11 +1157,9 @@
             <span class="tech-pill"><i class="fa-solid fa-cubes text-emerald-400 mr-1.5"></i>MLflow</span>
             <span class="tech-pill"><i class="fa-solid fa-file-waveform text-cyan-400 mr-1.5"></i>DVC</span>
             <span class="tech-pill"><i class="fa-solid fa-magnifying-glass text-indigo-400 mr-1.5"></i>FAISS & Pinecone</span>
-            <span class="tech-pill"><i class="fa-solid fa-link text-purple-400 mr-1.5"></i>LangChain & LangSmith</span>
-            <span class="tech-pill"><i class="fa-solid fa-robot text-pink-400 mr-1.5"></i>Transformers & HuggingFace</span>
+            <span class="tech-pill"><i class="fa-solid fa-link text-purple-400 mr-1.5"></i>LangChain</span>
             <span class="tech-pill"><i class="fa-solid fa-chart-simple text-orange-400 mr-1.5"></i>Pandas & NumPy</span>
             <span class="tech-pill"><i class="fa-solid fa-chart-pie text-cyan-400 mr-1.5"></i>Matplotlib & Seaborn</span>
-            <span class="tech-pill"><i class="fa-solid fa-table-cells text-red-400 mr-1.5"></i>Streamlit</span>
             <span class="tech-pill"><i class="fa-brands fa-html5 text-orange-500 mr-1.5"></i>HTML5 & CSS3</span>
           </div>
         </div>
@@ -1206,6 +1226,24 @@
                 </div>
               </div>
 
+              <!-- Role 3: iNeuron -->
+              <div class="relative group">
+                <span class="absolute -left-[27px] top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-400 border-4 border-[#070b14] group-hover:scale-125 transition-transform"></span>
+                <div class="bg-slate-900/80 border border-white/10 rounded-2xl p-5 hover:border-emerald-500/40 transition-all">
+                  <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                    <span class="text-xs font-mono text-emerald-400 font-semibold">10/2024 – 11/2024</span>
+                    <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 text-[10px] font-mono border border-emerald-500/20">Certificate Verified</span>
+                  </div>
+                  <h4 class="text-lg font-bold text-white">Machine Learning Intern</h4>
+                  <p class="text-slate-400 text-xs font-mono mb-3">iNeuron Intelligence Pvt. Ltd.</p>
+                  
+                  <ul class="space-y-2 text-xs text-slate-300 list-disc list-inside leading-relaxed">
+                    <li>Conducted extensive EDA on large customer datasets to identify behavioral patterns and high-value customer clusters.</li>
+                    <li>Trained K-Means segmentation models achieving a <strong class="text-emerald-300">Silhouette Score of 0.82</strong> for targeted marketing strategies.</li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -1229,14 +1267,14 @@
                     <span class="px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-300 text-[10px] font-mono border border-yellow-500/30">National Level</span>
                   </div>
                   <h4 class="text-lg font-bold text-white">All India Rank 5262</h4>
-                  <p class="text-slate-300 text-xs mt-1">Graduate Aptitude Test in Engineering (GATE) – Data Science & Artificial Intelligence (DA).</p>
+                  <p class="text-slate-300 text-xs mt-1">Graduate Aptitude Test in Engineering (GATE) – Data Science & Artificial Intelligence (DA) [93rd Percentile].</p>
                 </div>
               </div>
 
               <!-- Education: B.Tech -->
               <div class="relative group">
                 <span class="absolute -left-[27px] top-1.5 w-3.5 h-3.5 rounded-full bg-purple-400 border-4 border-[#070b14] group-hover:scale-125 transition-transform"></span>
-                <div class="bg-slate-900/80 border border-white/10 rounded-2xl p-5 hover:border-purple-500/40 transition-all">
+                <div class="bg-slate-900/80 border border-purple-500/40 rounded-2xl p-5 hover:border-purple-500/40 transition-all">
                   <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <span class="text-xs font-mono text-purple-400 font-semibold">09/2021 – 04/2025</span>
                     <span class="px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 text-[10px] font-mono">CGPA: 8.29 / 10</span>
@@ -1249,7 +1287,7 @@
               <!-- Education: Intermediate MPC -->
               <div class="relative group">
                 <span class="absolute -left-[27px] top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-400 border-4 border-[#070b14] group-hover:scale-125 transition-transform"></span>
-                <div class="bg-slate-900/80 border border-white/10 rounded-2xl p-5 hover:border-emerald-500/40 transition-all">
+                <div class="bg-slate-900/80 border border-emerald-500/40 rounded-2xl p-5 hover:border-emerald-500/40 transition-all">
                   <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <span class="text-xs font-mono text-emerald-400 font-semibold">06/2019 – 05/2021</span>
                     <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 text-[10px] font-mono">Score: 98%</span>
@@ -1267,7 +1305,7 @@
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT SECTION (POSTGRESQL CONNECTED) -->
     <section id="contact" class="py-24 bg-slate-950/90 border-t border-white/5 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -1367,17 +1405,17 @@
 
                 <div class="space-y-1.5">
                   <label for="contact-subject" class="block text-xs font-mono text-slate-300">Subject / Topic</label>
-                  <input type="text" id="contact-subject" name="subject" required placeholder="AI Opportunity / Collaboration" class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/10 focus:border-cyan-400 text-sm text-white placeholder:text-slate-600 outline-none transition-colors font-sans" />
+                  <input type="text" id="contact-subject" name="subject" required placeholder="AI Engineering Opportunity / Project Discussion" class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/10 focus:border-cyan-400 text-sm text-white placeholder:text-slate-600 outline-none transition-colors font-sans" />
                 </div>
 
                 <div class="space-y-1.5">
                   <label for="contact-message" class="block text-xs font-mono text-slate-300">Message</label>
-                  <textarea id="contact-message" name="message" rows="4" required placeholder="Hi Sai Pranav, I'd love to chat about..." class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/10 focus:border-cyan-400 text-sm text-white placeholder:text-slate-600 outline-none transition-colors resize-none font-sans"></textarea>
+                  <textarea id="contact-message" name="message" rows="4" required placeholder="Hi Sai Pranav, I'd like to discuss..." class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-white/10 focus:border-cyan-400 text-sm text-white placeholder:text-slate-600 outline-none transition-colors resize-none font-sans"></textarea>
                 </div>
 
                 <button type="submit" id="contact-submit-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 via-teal-400 to-purple-600 text-black font-bold text-sm tracking-wide shadow-lg shadow-cyan-500/20 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2">
                   <i class="fa-solid fa-paper-plane text-xs"></i>
-                  <span>Send Direct Message</span>
+                  <span>Send Message</span>
                 </button>
 
                 <p id="contact-status" class="text-center text-xs font-mono text-emerald-400 hidden pt-2"></p>

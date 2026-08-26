@@ -1,3 +1,13 @@
+# Environment & Credentials (CRITICAL - DO NOT COMMIT)
+.env
+.env.*
+*.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -19,9 +29,12 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-.env
 .venv
 venv/
 *.log
+
+# System & Temp
 .DS_Store
+Thumbs.db
 resume_extracted.txt
+chatbot_main_ref.py
