@@ -265,7 +265,7 @@ if FASTAPI_AVAILABLE:
 
     @app.post("/api/chat")
     async def ai_chat_assistant(req: ChatRequest):
-        """Generates AI assistant answers using Groq LLM (llama-3.3-70b-versatile) or fallback."""
+        """Generates AI assistant answers using Groq LLM (groq/compound-mini) or fallback."""
         user_query = req.query.strip()
         if not user_query:
             return {"reply": "Please enter a question or command to get started."}
@@ -282,7 +282,7 @@ if FASTAPI_AVAILABLE:
                         {"role": "system", "content": SYSTEM_PROMPT},
                         {"role": "user", "content": user_query}
                     ],
-                    model="llama-3.3-70b-versatile",
+                    model="groq/compound-mini",
                     temperature=0.2,
                     max_tokens=600,
                 )
@@ -367,7 +367,7 @@ if FASTAPI_AVAILABLE:
                             {"role": "system", "content": SYSTEM_PROMPT},
                             {"role": "user", "content": req.query}
                         ],
-                        model="llama-3.3-70b-versatile",
+                        model="groq/compound-mini",
                         temperature=0.2,
                         max_tokens=600,
                         stream=True
