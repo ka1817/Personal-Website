@@ -59,7 +59,7 @@ def init_db():
     try:
         import psycopg2
         # Clean URL format if needed (e.g. postgres:// -> postgresql://)
-        clean_url = db_url
+        clean_url = db_url.strip().strip('"\'')
         if clean_url.startswith("postgres://"):
             clean_url = clean_url.replace("postgres://", "postgresql://", 1)
 
@@ -92,7 +92,7 @@ def save_contact_to_db(name: str, email: str, subject: str, message: str) -> boo
 
     try:
         import psycopg2
-        clean_url = db_url
+        clean_url = db_url.strip().strip('"\'')
         if clean_url.startswith("postgres://"):
             clean_url = clean_url.replace("postgres://", "postgresql://", 1)
 
