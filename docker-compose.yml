@@ -1,0 +1,12 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: saipranav_portfolio
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - HOST=0.0.0.0
+    restart: unless-stopped
