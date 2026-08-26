@@ -26,7 +26,7 @@
 - 🗂️ **Filterable Projects Showcase**: Categorized by *Agentic AI & RAG*, *MLOps & Cloud*, *Healthcare & NLP*, and *Data Science*, featuring live GitHub repo links and interactive deep-dive architecture modals.
 - 🔊 **Real-time Web Audio Synthesizer**: Subtle futuristic audio feedback synthesized natively via the Web Audio API with instant mute toggle.
 - 📄 **Integrated Resume Viewer & Downloader**: Direct PDF viewer modal and one-click download.
-- 🐳 **Dockerized & Production-Ready**: Multi-stage lightweight Dockerfile and Docker Compose configuration.
+- 🐳 **Dockerized & Production-Ready**: Multi-stage lightweight `Dockerfile` for easy containerization.
 
 ---
 
@@ -64,9 +64,13 @@ Open your browser at **[http://localhost:8000](http://localhost:8000)**.
 
 ## 🐳 Docker Deployment
 
-### Run with Docker Compose
+### Run with Docker CLI
 ```bash
-docker compose up -d --build
+# Build the Docker image
+docker build -t saipranav-portfolio .
+
+# Run container on port 8000 (passing .env if configured)
+docker run -d -p 8000:8000 --env-file .env --name saipranav-portfolio saipranav-portfolio
 ```
 Access the application on **[http://localhost:8000](http://localhost:8000)**.
 
@@ -79,7 +83,6 @@ Personal_Website/
 ├── app.py                  # FastAPI server with Groq LLM & PostgreSQL contact handlers
 ├── requirements.txt        # Python backend dependencies (FastAPI, Groq, psycopg2, asyncpg)
 ├── Dockerfile              # Production multi-stage Docker build
-├── docker-compose.yml      # Container orchestration with .env support
 ├── .dockerignore           # Excluded build artifacts & credentials
 ├── .gitignore              # Git ignored patterns (securing .env)
 ├── index.html              # Modern, responsive portfolio interface
