@@ -1,0 +1,91 @@
+name: CI/CD Pipeline - Build, Test & Deploy to AWS EC2
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  IMAGE_NAME: website-portfolio
+
+jobs:
+  ci:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 2. Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: 3. Install Dependencies & Test Application
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          # Syntax, import and module compilation check
+          python -m py_compile app.py
+          python -c "import app; print('Application verification passed successfully!')"
+
+      - name: 4. Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: 5. Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME || secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD || secrets.DOCKERHUB_TOKEN }}
+
+      - name: 6. Build and Push Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.DOCKER_USERNAME || secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+            ${{ secrets.DOCKER_USERNAME || secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy-to-ec2:
+    name: Deploy to EC2
+    needs: ci
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    steps:
+      - name: Execute SSH commands on EC2
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME || secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            # 1. Stop the currently running container (if it exists)
+            docker stop website-portfolio || true
+            
+            # 2. Remove the container
+            docker rm website-portfolio || true
+            
+            # 3. Remove the old image to free up space
+            docker rmi ${{ secrets.DOCKER_USERNAME || secrets.DOCKERHUB_USERNAME }}/website-portfolio:latest || true
+            
+            # 4. Pull the latest image from Docker Hub
+            docker pull ${{ secrets.DOCKER_USERNAME || secrets.DOCKERHUB_USERNAME }}/website-portfolio:latest
+            
+            # 5. Run the new container with environment variables
+            docker run -d -p 8000:8000 \
+              --name website-portfolio \
+              --restart unless-stopped \
+              -e GROQ_API_KEY="${{ secrets.GROQ_API_KEY }}" \
+              -e DATABASE_URL="${{ secrets.DATABASE_URL }}" \
+              ${{ secrets.DOCKER_USERNAME || secrets.DOCKERHUB_USERNAME }}/website-portfolio:latest
