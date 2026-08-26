@@ -78,17 +78,18 @@
   <link rel="stylesheet" href="static/css/style.css" />
 </head>
 
-<body class="bg-[#070b14] text-slate-200 font-sans antialiased selection:bg-cyan-500 selection:text-black overflow-x-hidden">
+<body class="bg-[#030712] text-slate-200 font-sans antialiased selection:bg-cyan-500 selection:text-black overflow-x-hidden">
   
-  <!-- Interactive Particle Background Canvas -->
-  <canvas id="particle-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
-  
-  <!-- Glowing Ambient Gradient Orbs in Background -->
-  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0 opacity-40">
-    <div class="absolute -top-40 -left-40 w-96 h-96 bg-cyan-600/30 rounded-full filter blur-3xl animate-blob"></div>
-    <div class="absolute top-1/3 -right-40 w-96 h-96 bg-purple-600/30 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
-    <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-emerald-600/20 rounded-full filter blur-3xl animate-blob animation-delay-4000"></div>
-  </div>
+  <!-- Subtle Blueprint Engineering Grid -->
+  <div class="bg-blueprint-grid"></div>
+
+  <!-- Multi-layered Atmospheric Ambient Spotlights -->
+  <div class="bg-spotlight-top"></div>
+  <div class="bg-spotlight-mid"></div>
+  <div class="bg-spotlight-bottom"></div>
+
+  <!-- Interactive Constellation Particle Canvas -->
+  <canvas id="particle-canvas" class="fixed inset-0 pointer-events-none z-0 opacity-75"></canvas>
 
   <!-- Custom Cursor Follower -->
   <div id="custom-cursor" class="fixed w-8 h-8 rounded-full border border-cyan-400/60 pointer-events-none z-50 transition-transform duration-75 ease-out -translate-x-1/2 -translate-y-1/2 hidden md:block"></div>
