@@ -1,12 +1,5 @@
-/**
- * Katta Sai Pranav Reddy - Portfolio Master Controller
- * Handles animations, Groq LLM terminal console, PostgreSQL contact dispatch, and modals.
- */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // -----------------------------------------------------------
-  // 1. Audio Synthesizer (Web Audio API - No external assets)
-  // -----------------------------------------------------------
   let audioCtx = null;
   let soundEnabled = localStorage.getItem("sound_enabled") === "true";
 
@@ -84,9 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // -----------------------------------------------------------
-  // 2. Custom Cursor Follower & Hover State
-  // -----------------------------------------------------------
   const cursor = document.getElementById("custom-cursor");
   const cursorDot = document.getElementById("custom-cursor-dot");
 
@@ -109,9 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // -----------------------------------------------------------
-  // 3. Dynamic Typewriter Effect for Subtitle
-  // -----------------------------------------------------------
   const typedTextEl = document.getElementById("typed-text");
   if (typedTextEl) {
     const roles = [
@@ -154,9 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeLoop, 800);
   }
 
-  // -----------------------------------------------------------
-  // 4. Mobile Drawer & Navigation Scroll Spy
-  // -----------------------------------------------------------
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileIcon = document.getElementById("mobile-icon");
@@ -200,9 +184,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // -----------------------------------------------------------
-  // 5. Theme Selector
-  // -----------------------------------------------------------
   const themeMenuBtn = document.getElementById("theme-menu-btn");
   const themeDropdown = document.getElementById("theme-dropdown");
   const themeOpts = document.querySelectorAll(".theme-opt");
@@ -235,9 +216,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // -----------------------------------------------------------
-  // 6. Project Filter Tabs
-  // -----------------------------------------------------------
   const filterBtns = document.querySelectorAll(".filter-btn");
   const projectCards = document.querySelectorAll(".project-card");
 
@@ -261,9 +239,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // -----------------------------------------------------------
-  // 7. Project Architecture Modal Data & Events
-  // -----------------------------------------------------------
   const projectDatabase = {
     bigbasket: {
       title: "BigBasket SmartCart – AI-Driven Shopping Assistant",
@@ -373,9 +348,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // -----------------------------------------------------------
-  // 8. Resume Modal Controls
-  // -----------------------------------------------------------
   const resumeModal = document.getElementById("resume-modal");
   const openResumeBtn = document.getElementById("open-resume-btn");
   const mobileResumeBtn = document.getElementById("mobile-resume-btn");
@@ -400,9 +372,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // -----------------------------------------------------------
-  // 9. Interactive AI Console / Terminal (Groq LLM)
-  // -----------------------------------------------------------
   const termForm = document.getElementById("terminal-form");
   const termInput = document.getElementById("terminal-input");
   const termOutput = document.getElementById("terminal-output");
@@ -557,9 +526,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (contactForm) contactForm.reset();
   }
 
-  // -----------------------------------------------------------
-  // 11. Clipboard Copy Helpers & Toast Notifications
-  // -----------------------------------------------------------
   document.querySelectorAll(".copy-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const textToCopy = btn.getAttribute("data-copy");

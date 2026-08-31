@@ -404,7 +404,7 @@ if FASTAPI_AVAILABLE:
             return {
                 "status": "success",
                 "storage": "postgresql",
-                "message": "Thank you! Your message has been securely recorded to the PostgreSQL database."
+                "message": "Thank you! Your message has been securely recorded."
             }
         else:
             return {
